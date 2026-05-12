@@ -2,6 +2,7 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { Home, BookOpen, Church, Calendar, Menu, X, Cross } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import brasaoImg from '../images/brasaoImg.png'
 
 const navItems = [
   { path: "/", label: "Início", icon: Home },
