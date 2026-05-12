@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-lora: 'Lora', serif;
+    --font-inter: 'Inter', sans-serif;
+
+    --background: 220 30% 97%;
+    --foreground: 220 40% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+    --primary: 220 65% 28%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 348 55% 92%;
+    --secondary-foreground: 348 60% 30%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 46%;
+    --accent: 40 70% 55%;
+    --accent-foreground: 40 80% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 65% 28%;
+    --chart-1: 220 65% 28%;
+    --chart-2: 348 55% 50%;
+    --chart-3: 40 70% 55%;
+    --chart-4: 190 50% 45%;
+    --chart-5: 280 40% 50%;
+    --radius: 0.75rem;
+
+    --mercy-blue: 220 65% 28%;
+    --mercy-blue-light: 220 50% 45%;
+    --mercy-red: 348 65% 42%;
+    --mercy-red-light: 348 55% 92%;
+    --mercy-gold: 40 70% 55%;
+    --mercy-gold-light: 40 60% 90%;
+    --mercy-cream: 40 30% 96%;
+    --mercy-rose: 348 40% 85%;
+
+    --sidebar-background: 220 65% 28%;
+    --sidebar-foreground: 220 10% 95%;
+    --sidebar-primary: 40 70% 55%;
+    --sidebar-primary-foreground: 220 65% 15%;
+    --sidebar-accent: 220 55% 35%;
+    --sidebar-accent-foreground: 220 10% 95%;
+    --sidebar-border: 220 55% 35%;
+    --sidebar-ring: 40 70% 55%;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 220 10% 95%;
+    --card: 220 35% 12%;
+    --card-foreground: 220 10% 95%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 220 10% 95%;
+    --primary: 220 50% 55%;
+    --primary-foreground: 220 40% 8%;
+    --secondary: 348 30% 18%;
+    --secondary-foreground: 348 40% 80%;
+    --muted: 220 25% 16%;
+    --muted-foreground: 220 15% 60%;
+    --accent: 40 60% 50%;
+    --accent-foreground: 40 80% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 220 50% 55%;
+    --chart-1: 220 50% 55%;
+    --chart-2: 348 45% 55%;
+    --chart-3: 40 60% 50%;
+    --chart-4: 190 45% 50%;
+    --chart-5: 280 35% 55%;
+
+    --mercy-blue: 220 50% 55%;
+    --mercy-blue-light: 220 40% 30%;
+    --mercy-red: 348 50% 50%;
+    --mercy-red-light: 348 30% 18%;
+    --mercy-gold: 40 60% 50%;
+    --mercy-gold-light: 40 40% 18%;
+    --mercy-cream: 220 20% 12%;
+    --mercy-rose: 348 25% 20%;
+
+    --sidebar-background: 220 40% 8%;
+    --sidebar-foreground: 220 10% 95%;
+    --sidebar-primary: 40 60% 50%;
+    --sidebar-primary-foreground: 220 40% 8%;
+    --sidebar-accent: 220 35% 15%;
+    --sidebar-accent-foreground: 220 10% 95%;
+    --sidebar-border: 220 30% 15%;
+    --sidebar-ring: 40 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-lora;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--mercy-blue-light) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--mercy-blue-light) / 0.5);
+}
