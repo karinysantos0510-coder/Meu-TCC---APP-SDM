@@ -2,7 +2,6 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { Home, BookOpen, Church, Calendar, Menu, X, Cross } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import brasaoImg from '../images/brasaoImg.png'
 
 const navItems = [
   { path: "/", label: "Início", icon: Home },
@@ -23,7 +22,7 @@ export default function Layout() {
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-3">
             <img
-              src={brasaoImg}
+              src="https://media.base44.com/images/public/69d69609aab3eea427f55aaa/51c0a4073_Captura_de_tela_2026-05-11_160110-removebg-preview.png"
               alt="Brasão"
               className="w-10 h-10 object-contain shrink-0"
             />
@@ -65,7 +64,7 @@ export default function Layout() {
         <div className="flex items-center justify-between px-4 h-14">
           <div className="flex items-center gap-2">
             <img
-              src={brasaoImg}
+              src="https://media.base44.com/images/public/69d69609aab3eea427f55aaa/51c0a4073_Captura_de_tela_2026-05-11_160110-removebg-preview.png"
               alt="Brasão"
               className="w-7 h-7 object-contain"
             />
