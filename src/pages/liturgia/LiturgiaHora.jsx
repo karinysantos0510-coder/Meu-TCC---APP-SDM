@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import LiturgiaHoraContent from "../../components/liturgy/LiturgiaHoraContent";
+import LiturgiaHoraContent from "./LiturgiaHoraContent";
 
 const HORA_TITLES = {
   laudes: "Laudes — Oração da Manhã",
@@ -13,7 +13,10 @@ const HORA_TITLES = {
 
 export default function LiturgiaHora() {
   const { hora } = useParams();
-  const title = HORA_TITLES[hora];
+  
+  // CORREÇÃO 1: Garante que 'hora' seja uma string válida (se for undefined, vira string vazia)
+  const horaChave = hora || "";
+  const title = HORA_TITLES[horaChave];
 
   if (!title) {
     return (
@@ -37,7 +40,8 @@ export default function LiturgiaHora() {
       </div>
 
       {/* Conteúdo dinâmico do dia — Paulus */}
-      <LiturgiaHoraContent hora={hora} />
+      {/* CORREÇÃO 2: Passa a propriedade correta 'horaAtual' que o componente espera receber */}
+      <LiturgiaHoraContent horaAtual={horaChave} />
     </div>
   );
 }
